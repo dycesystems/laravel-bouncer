@@ -17,7 +17,7 @@ class CreatePersonalGameTokensTable extends Migration
             $table->bigIncrements('id');
             $table->morphs('tokenable');
             $table->string('name');
-            $table->enum('type', ['auth', 'finance'])->default('auth')->index('game_tokens_type');
+            $table->enum('type', ['auth', 'session'])->default('auth')->index('game_tokens_type');
             $table->string('token', 64)->unique();
             $table->string('abilities')->nullable();
             $table->timestamp('last_used_at')->nullable();

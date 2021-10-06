@@ -31,7 +31,7 @@ return [
 
     'expiration' => [
         'auth' => 1,
-        'finance' => 40,
+        'session' => 30,
     ],
 
 ];
