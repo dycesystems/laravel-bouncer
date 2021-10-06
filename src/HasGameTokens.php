@@ -43,7 +43,7 @@ trait HasGameTokens
      */
     public function createGameToken(string $name, string $type = 'auth', array $abilities = ['*'])
     {
-        $token = $this->tokens()->create([
+        $token = $this->gameTokens()->create([
             'name' => $name,
             'type' => $type,
             'token' => hash('sha256', $plainTextToken = Str::uuid()),
