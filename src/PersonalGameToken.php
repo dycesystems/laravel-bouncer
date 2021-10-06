@@ -24,6 +24,8 @@ class PersonalGameToken extends Model implements HasAbilities
      */
     protected $fillable = [
         'name',
+        'provider_id',
+        'game_id',
         'type',
         'token',
         'abilities',
