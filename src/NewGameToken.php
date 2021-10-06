@@ -22,16 +22,24 @@ class NewGameToken implements Arrayable, Jsonable
     public $plainTextToken;
 
     /**
+     * The plain text version of the token with ID prepend.
+     *
+     * @var string
+     */
+    public $plainTextTokenId;
+
+    /**
      * Create a new game token result.
      *
-     * @param  \Dyce\LaravelBouncer\PersonalGameToken  $gameToken
-     * @param  string  $plainTextToken
-     * @return void
+     * @param \Dyce\LaravelBouncer\PersonalGameToken $gameToken
+     * @param string $plainTextToken
+     * @param string $plainTextTokenId
      */
-    public function __construct(PersonalGameToken $gameToken, string $plainTextToken)
+    public function __construct(PersonalGameToken $gameToken, string $plainTextToken, string $plainTextTokenId)
     {
         $this->gameToken = $gameToken;
         $this->plainTextToken = $plainTextToken;
+        $this->plainTextTokenId = $plainTextTokenId;
     }
 
     /**
@@ -44,6 +52,7 @@ class NewGameToken implements Arrayable, Jsonable
         return [
             'gameToken' => $this->gameToken,
             'plainTextToken' => $this->plainTextToken,
+            'plainTextTokenId' => $this->plainTextTokenId,
         ];
     }
 

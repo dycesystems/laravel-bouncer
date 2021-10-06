@@ -50,7 +50,7 @@ trait HasGameTokens
             'abilities' => $abilities,
         ]);
 
-        return new NewGameToken($token, $token->getKey().'|'.$plainTextToken);
+        return new NewGameToken($token, $plainTextToken, $token->getKey().'|'.$plainTextToken);
     }
 
     /**
