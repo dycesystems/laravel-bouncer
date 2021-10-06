@@ -2,9 +2,9 @@
 
 <p align="center">
 <a href="https://github.com/dycesystems/laravel-bouncer/actions"><img src="https://github.com/dycesystems/laravel-bouncer/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/dycesystems/laravel-bouncer"><img src="https://img.shields.io/packagist/dt/dycesystems/laravel-bouncer" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/dycesystems/laravel-bouncer"><img src="https://img.shields.io/packagist/v/dycesystems/laravel-bouncer" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/dycesystems/laravel-bouncer"><img src="https://img.shields.io/packagist/l/dycesystems/laravel-bouncer" alt="License"></a>
+<a href="https://packagist.org/packages/dyce/laravel-bouncer"><img src="https://img.shields.io/packagist/dt/dyce/laravel-bouncer" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/dyce/laravel-bouncer"><img src="https://img.shields.io/packagist/v/dyce/laravel-bouncer" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/dyce/laravel-bouncer"><img src="https://img.shields.io/packagist/l/dyce/laravel-bouncer" alt="License"></a>
 </p>
 
 ## Introduction
