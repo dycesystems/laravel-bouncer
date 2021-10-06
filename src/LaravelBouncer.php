@@ -11,7 +11,7 @@ class LaravelBouncer
      *
      * @var string
      */
-    public static $personalGameTokenModel = 'Laravel\\LaravelBouncer\\PersonalGameToken';
+    public static $personalGameTokenModel = 'Dyce\\LaravelBouncer\\PersonalGameToken';
 
     /**
      * A callback that can add to the validation of the game token.
