@@ -37,14 +37,17 @@ trait HasGameTokens
     /**
      * Create a new personal game token for the user.
      *
-     * @param  string  $name
-     * @param  array  $abilities
+     * @param string $name
+     * @param int $provider
+     * @param string $type
+     * @param array $abilities
      * @return \Dyce\LaravelBouncer\NewGameToken
      */
-    public function createGameToken(string $name, string $type = 'auth', array $abilities = ['*'])
+    public function createGameToken(string $name, int $provider, string $type = 'auth', array $abilities = ['*'])
     {
         $token = $this->gameTokens()->create([
             'name' => $name,
+            'provider_id' => $provider,
             'type' => $type,
             'token' => hash('sha256', $plainTextToken = Str::uuid()),
             'abilities' => $abilities,

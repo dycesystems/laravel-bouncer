@@ -23,11 +23,12 @@ interface HasGameTokens
      * Create a new personal game token for the user.
      *
      * @param string $name
+     * @param int $provider
      * @param string $type
      * @param array $abilities
      * @return \Dyce\LaravelBouncer\NewGameToken
      */
-    public function createGameToken(string $name, string $type = 'auth', array $abilities = ['*']);
+    public function createGameToken(string $name, int $provider, string $type = 'auth', array $abilities = ['*']);
 
     /**
      * Get the game token currently associated with the user.
