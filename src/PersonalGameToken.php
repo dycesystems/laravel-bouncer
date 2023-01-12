@@ -14,7 +14,6 @@ class PersonalGameToken extends Model implements HasAbilities
      */
     protected $casts = [
         'abilities' => 'json',
-        'dashes' => 'boolean',
         'last_used_at' => 'datetime',
     ];
 
@@ -29,7 +28,6 @@ class PersonalGameToken extends Model implements HasAbilities
         'game_id',
         'type',
         'token',
-        'dashes',
         'abilities',
     ];
 
