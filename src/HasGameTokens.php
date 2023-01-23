@@ -50,7 +50,7 @@ trait HasGameTokens
         if ($dashes) {
             $plainTextToken = Str::uuid();
         } else {
-            $plainTextToken = Str::uuid()->getHex();
+            $plainTextToken = strtoupper(Str::uuid()->getHex());
         }
         $token = $this->gameTokens()->create([
             'name' => $name,
