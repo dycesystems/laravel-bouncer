@@ -13,9 +13,7 @@ class UpdatePersonalGameTokensTable extends Migration
      */
     public function up()
     {
-        Schema::table('personal_game_tokens', function (Blueprint $table) {
-            $table->enum('type', ['auth', 'session', 'session_day', 'never'])->change();
-        });
+        \DB::statement("ALTER TABLE `personal_game_tokens` CHANGE `type` `type` ENUM('auth', 'session', 'session_day', 'never') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'auth';");
     }
 
     /**
@@ -25,8 +23,6 @@ class UpdatePersonalGameTokensTable extends Migration
      */
     public function down()
     {
-        Schema::table('personal_game_tokens', function (Blueprint $table) {
-            $table->enum('type', ['auth', 'session', 'session_day'])->change();
-        });
+
     }
 }
