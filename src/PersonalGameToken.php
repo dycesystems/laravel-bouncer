@@ -132,8 +132,8 @@ class PersonalGameToken extends Model implements HasAbilities
         $expiration = config('bouncer.expiration.'.$this->type);
 
         $isValid = is_null($this->last_used_at) ?
-            ($this->created_at->gt(now()->subMinutes($expiration))) :
-            ($this->last_used_at->gt(now()->subMinutes($expiration)));
+            (! $expiration || $this->created_at->gt(now()->subMinutes($expiration))) :
+            (! $expiration || $this->last_used_at->gt(now()->subMinutes($expiration)));
 
         if (is_callable(LaravelBouncer::$gameTokenAuthenticationCallback)) {
             $isValid = (bool) (LaravelBouncer::$gameTokenAuthenticationCallback)($this, $isValid);

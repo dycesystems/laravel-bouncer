@@ -32,7 +32,8 @@ return [
     'expiration' => [
         'auth' => 1,
         'session' => 30,
-        'session_day' => 1440
+        'session_day' => 1440,
+        'never' => null
     ],
 
 ];

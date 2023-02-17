@@ -103,7 +103,7 @@ class Guard
         $expiration = config('bouncer.expiration.'.$gameToken->type);
 
         $isValid =
-            ($gameToken->created_at->gt(now()->subMinutes($expiration)))
+            (! $expiration || $gameToken->created_at->gt(now()->subMinutes($expiration)))
             && $this->hasValidProvider($gameToken->tokenable);
 
         if (is_callable(LaravelBouncer::$gameTokenAuthenticationCallback)) {
